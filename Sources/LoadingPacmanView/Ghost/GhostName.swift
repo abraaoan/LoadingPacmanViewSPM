@@ -1,6 +1,6 @@
 //
 //  GhostName.swift
-//  LoadingPackmanView
+//  LoadingPacmanView
 //
 //  Created by Abraao Nascimento on 13/09/2023.
 //

@@ -1,6 +1,6 @@
 //
 //  LoadingView.swift
-//  LoadingPackmanView
+//  LoadingPacmanView
 //
 //  Created by Abraao Nascimento on 13/09/2023.
 //
@@ -37,8 +37,8 @@ public struct LoadingView: View {
                                       y: (geometry.size.height / 2) - 28.0))
                 
                 Pacman(offsetAmount: isAnimation ? 20 : 0, isReversed: isReversed)
-                    .fill(Constants.packmanColor)
-                    .frame(height: Constants.packManSize)
+                    .fill(Constants.pacmanColor)
+                    .frame(height: Constants.pacmanSize)
                     .position(CGPoint(x: Constants.initialPosition + distance + offset + pacmanOffset,
                                       y: geometry.size.height / 2))
             }
@@ -55,13 +55,11 @@ public struct LoadingView: View {
     }
     
     func animateRace() {
-        let duration = 3.30
-        
-        withAnimation(Animation.linear(duration: 3.30)) {
+        withAnimation(Animation.linear(duration: Constants.duration)) {
             offset = isReversed ? -100 : UIScreen.main.bounds.width + 70
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration + 0.05) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.duration + 0.05) {
             isReversed.toggle()
             getNextGhost()
             animateRace()
@@ -81,8 +79,9 @@ public struct LoadingView: View {
 
 extension LoadingView {
     private enum Constants {
-        static let packmanColor = Color(red: 1.0, green: 0.90, blue: 0.21)
-        static let packManSize = 50.0
+        static let duration = 3.30
+        static let pacmanColor = Color(red: 1.0, green: 0.90, blue: 0.21)
+        static let pacmanSize = 50.0
         static let initialPosition = -60.0
     }
 }
