@@ -8,7 +8,7 @@ import LoadingPacmanView
 
 var body: some View {
     LoadingView()
-    Text("Packman loading...")
+    Text("Pac-man loading...")
         .foregroundColor(Color(red: 25 / 255,
                                green: 25 / 255,
                                blue: 166/255))
