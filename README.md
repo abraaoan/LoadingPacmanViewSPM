@@ -1,10 +1,10 @@
-# LoadingPackmanViewSPM
+# LoadingPacmanViewSPM
 
 An example of SWIFTUI shape animation loading.
 
 # Usage
 ```swift
-import LoadingPackmanView
+import LoadingPacmanView
 
 var body: some View {
     LoadingView()
