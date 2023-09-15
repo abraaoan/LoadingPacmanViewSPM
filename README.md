@@ -2,6 +2,10 @@
 
 An example of SWIFTUI shape animation loading.
 
+Example application:
+https://github.com/abraaoan/LoadingPacmanView
+
+
 # Usage
 ```swift
 import LoadingPacmanView
